@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+
+
+        
+        <button id="1" >Rock</button>
+
+        <button id="2" >Paper</button>
+
+        <button id="3" >Scissor</button>
+
+        <div id="results"></div>
+
+
+        <script>
+          
+          
+           console.log("enter \game()\ to start the game");
+          
+          
+            function computerPlay(){
+                let a = ['rock','paper','scissors'];
+                let b = a[Math.floor(Math.random() * a.length)];
+                return b;
+            }
+          
+          
+            function humanPlay(){
+                let c = prompt('rock,paper or scissors');
+                return c;
+          }
+          
+          
+            function playRound ( humanSelection,computerSelection){
+                if (computerSelection == humanSelection) {
+                    console.log("Its a tie");
+
+          
+                }
+          
+          
+               if (computerSelection == 'rock' && humanSelection.toLowerCase() == 'paper') {
+                console.log("human wins");
+                   return 'human wins';
+                   
+
+
+               } 
+               
+               else if (computerSelection == 'rock' && humanSelection.toLowerCase() == 'scissors') {
+                console.log("computer wins");
+
+                   return 'computer wins';
+                   
+
+
+               } 
+               
+               else if ( computerSelection == 'paper' && humanSelection.toLowerCase() == 'rock') {
+                console.log("computer wins");
+
+                   return 'computer wins';
+                   
+
+               } 
+               
+               else if (computerSelection == 'paper' && humanSelection.toLowerCase() == 'scissors') {
+                console.log("human wins");
+                   return 'human wins';
+                   
+
+
+
+               } 
+               
+               else if (computerSelection == 'scissors' && humanSelection.toLowerCase() == 'rock') {
+                console.log("human wins");
+
+                   return 'human wins';
+                   
+
+
+               } 
+               
+               else if (computerSelection == 'scissors' && humanSelection.toLowerCase() == 'paper') {
+                console.log("computer wins");
+                   return 'computer wins'
+                  
+
+               } 
+               
+               else if (computerSelection == 'rock' && humanSelection.toLowerCase() == 'scissors') { 
+                   
+                   
+                   console.log("computer wins");
+                   return 'computer wins';
+                   
+
+
+               } 
+ 
+            }
+            function game(){
+                computerSelection = computerPlay();
+                humanSelection = humanPlay();
+                let results = playRound(humanSelection,computerSelection);
+                console.log(results);
+                
+
+
+
+            }
+
+            
+            
+            
+            const one = document.getElementById('1');
+            
+            one.onclick = () => playRound('rock',computerPlay());
+
+            const two = document.getElementById('2');
+            
+            two.onclick = () => playRound('paper',computerPlay());
+
+            const three = document.getElementById('3');
+            
+            three.onclick = () => playRound('scissors',computerPlay());
+
+            var resultt = document.getElementById('results');
+            
+
+
+
+
+
+        </script>
+    </body>
+</html>
