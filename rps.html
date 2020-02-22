@@ -39,8 +39,7 @@
           
             function playRound ( humanSelection,computerSelection){
                 if (computerSelection == humanSelection) {
-                  console.log("its a tie");
-                  return 'its a tie';
+                  resultt.textContent = 'its a tie';
                     
 
           
@@ -48,33 +47,27 @@
           
           
                if (computerSelection == 'rock' && humanSelection.toLowerCase() == 'paper') {
-                console.log("human wins");
-                   return 'human wins';
+                resultt.textContent = 'human wins';
                    
 
 
                } 
                
                else if (computerSelection == 'rock' && humanSelection.toLowerCase() == 'scissors') {
-                console.log("computer wins");
-
-                   return 'computer wins';
+                resultt.textContent = 'computer wins';
                    
 
 
                } 
                
                else if ( computerSelection == 'paper' && humanSelection.toLowerCase() == 'rock') {
-                console.log("computer wins");
-
-                   return 'computer wins';
+                resultt.textContent = 'computer wins';
                    
 
                } 
                
                else if (computerSelection == 'paper' && humanSelection.toLowerCase() == 'scissors') {
-                console.log("human wins");
-                   return 'human wins';
+                resultt.textContent = 'human wins';
                    
 
 
@@ -82,17 +75,14 @@
                } 
                
                else if (computerSelection == 'scissors' && humanSelection.toLowerCase() == 'rock') {
-                console.log("human wins");
-
-                   return 'human wins';
+                resultt.textContent = 'human wins';
                    
 
 
                } 
                
                else if (computerSelection == 'scissors' && humanSelection.toLowerCase() == 'paper') {
-                console.log("computer wins");
-                   return 'computer wins'
+                resultt.textContent = 'computer wins';
                   
 
                } 
@@ -100,9 +90,7 @@
                else if (computerSelection == 'rock' && humanSelection.toLowerCase() == 'scissors') { 
                    
                    
-                   console.log("computer wins");
-                   return 'computer wins';
-                   
+                resultt.textContent = 'computer wins';
 
 
                } 
@@ -125,15 +113,15 @@
 
             const one = document.getElementById('1');
             
-            one.onclick =  () => resultt.textContent = playRound('rock',computerPlay());
+            one.onclick =  () =>  playRound('rock',computerPlay());
 
             const two = document.getElementById('2');
             
-            two.onclick = () => resultt.textContent = playRound('paper',computerPlay());
+            two.onclick = () =>  playRound('paper',computerPlay());
 
             const three = document.getElementById('3');
             
-            three.onclick = () => resultt.textContent = playRound('scissors',computerPlay());
+            three.onclick = () =>  playRound('scissors',computerPlay());
 
 
 
