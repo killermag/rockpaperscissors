@@ -39,7 +39,9 @@
           
             function playRound ( humanSelection,computerSelection){
                 if (computerSelection == humanSelection) {
-                    console.log("Its a tie");
+                  console.log("its a tie");
+                  return 'its a tie';
+                    
 
           
                 }
@@ -119,21 +121,20 @@
 
             
             
-            
+            let resultt = document.getElementById("results");
+
             const one = document.getElementById('1');
             
-            one.onclick = () => playRound('rock',computerPlay());
+            one.onclick =  () => resultt.textContent = playRound('rock',computerPlay());
 
             const two = document.getElementById('2');
             
-            two.onclick = () => playRound('paper',computerPlay());
+            two.onclick = () => resultt.textContent = playRound('paper',computerPlay());
 
             const three = document.getElementById('3');
             
-            three.onclick = () => playRound('scissors',computerPlay());
+            three.onclick = () => resultt.textContent = playRound('scissors',computerPlay());
 
-            var resultt = document.getElementById('results');
-            
 
 
 
